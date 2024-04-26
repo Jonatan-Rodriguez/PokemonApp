@@ -1,13 +1,12 @@
 const { Router } = require("express");
-/* const { getDriversAll } = require("../controllers/getDriversAll");
-const { getDriverById } = require('../controllers/getDriverById');
-const { postDriver } = require('../controllers/postDriver');
-const { getTeams } = require('../controllers/getTeams'); */
 const { getPokemonsAll } = require("../controllers/getPokemonsAll");
+const { getPokemonId } = require("../controllers/getPokemonId");
 
 const router = Router();
 
 router.get('/pokemon', getPokemonsAll);
+
+router.get('/pokemon/:id', getPokemonId);
 /* 
 router.get('/drivers', getDriversAll);
 
